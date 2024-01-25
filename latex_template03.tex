@@ -1,0 +1,169 @@
+\documentclass[a4paper,12pt]{scrartcl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bitte zuerst diese Variablen setzen!
+%
+\def\Nr{3}					%Hier die Nummer des Übungsblatts eintragen
+\def\NameA{Alice Müller}	%Hier den Name eintragen
+\def\MatA{1234567}			%Hier die Matrikelnummer eintragen
+\def\NameB{Bob Meier}		%Hier den Name des 2. Gruppenmitglieds eintragen
+\def\MatB{765421}			%Hier die Matrikelnummer des 2. Gruppenmitglieds eintragen
+\def\NameC{}				%Name 3. Gruppenmitglied
+\def\MatC{}					%Matrikelnummer 3. Gruppenmitglied
+\def\NameD{}				%Name 4. Gruppenmitglied
+\def\MatD{}					%Matrikelnummer 4. Gruppenmitglied
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{algorithm}
+\usepackage{xcolor}
+\setlength{\marginparwidth}{2.5cm}
+\usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{forest}
+\usetikzlibrary{
+	arrows,
+	arrows.meta,
+	automata,
+	calc,
+	chains,
+	trees,
+	positioning,
+	scopes,
+	decorations.pathmorphing,
+	shapes,
+	backgrounds,
+	chains,
+	}
+\tikzset{%
+    every node/.style={minimum size = 6mm, circle, draw, inner sep=0cm, text centered},
+    no edge/.style={edge from parent/.append style={draw=none}},
+}
+
+\geometry{margin=3cm, top=2.7cm}
+\renewcommand{\thesection}{\arabic{section}{.}}
+
+\begin{document}
+\begin{center}
+	\sffamily
+	\bfseries
+	\LARGE
+	Datenstrukturen und Algorithmen\\
+	\Large
+	\vspace{.2\parskip}
+	Hausübung \Nr\\
+	\normalsize\normalfont
+	WiSe 23/24
+	\vspace{.2\parskip}
+\end{center}
+
+\begin{tabular}[t]{p{4.5cm} p{3cm}}
+	\toprule
+	Name & Matrikelnummer\\
+	\midrule
+	\NameA & \MatA\\
+	\NameB & \MatB\\
+	\ifx\NameC\empty\else\NameC & \MatC\\\fi
+	\ifx\NameD\empty\else\NameD & \MatD\\\fi
+	\bottomrule
+\end{tabular}
+\hfill
+\begin{tabular}[t]{ccccc}
+	\toprule
+	A1 & A2 & A3 & Bonus & $\Sigma$ \\
+	\midrule
+	\\
+	\bottomrule	
+\end{tabular}
+\hfill\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ab hier bearbeiten 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Informationen zu \LaTeX{} auf z.B.: \url{https://tex.cloud.uni-hannover.de/learn}.
+
+\section*{Aufgabe 1}
+\begin{enumerate}[a)]
+	\item
+    \item \
+    \begin{center}
+        \begin{tikzpicture}[
+            level distance = 0.9cm,
+            level/.style={sibling distance=8cm/2^#1},
+            ]
+            \node {15}
+                child{ node {11}
+                    child{ node {4} 
+                        child{ node {1}}
+                        child{ node {6}}
+                    }
+                    child{ node {12}}
+                }
+                child{ node {29} 
+                    child{ node {27}
+                        child{ node {21}}
+                        child{[no edge] node[draw=none] {}}
+                    }
+                    child{ node {30}}                    
+                };
+        \end{tikzpicture}
+        \end{center}
+\end{enumerate}
+
+
+\section*{Aufgabe 2}
+\begin{enumerate}[a)]
+	\item
+    $$   
+        \def\h#1{\parbox{1.5em}{\centering #1}}
+        \renewcommand{\arraystretch}{2}
+        \begin{array}{|c|*{6}{c|}}\hline
+            \h0 & \h1 & \h2 & \h3 & \h4 & \h5 & \h6\\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+        \end{array}
+        \quad
+        \begin{array}{|c|*{6}{c|}}\hline
+            \h0 & \h1 & \h2 & \h3 & \h4 & \h5 & \h6\\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+            & & & & & & \\ \hline
+        \end{array}
+    $$
+	\item
+	\item
+\end{enumerate}
+
+
+\section*{Aufgabe 3}
+\begin{enumerate}[a)]
+	\item 
+	\item
+	\item
+\end{enumerate}
+\end{document}
