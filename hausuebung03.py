@@ -264,7 +264,7 @@ def dice_game(sides: int, DEBUG:bool=False) -> int:
     return x0
 
 
-def calculate_probability(x:int, n:int, memo:Dict[int, float], DEBUG:bool) -> int: #unused "x", "n", "memo"
+def calculate_probability(x:int, n:int, memo:Dict[int, float], DEBUG:bool) -> int:
     # if x is already calculated, return the value for x 
     if x in memo: 
         return memo[x]
