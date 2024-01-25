@@ -164,6 +164,15 @@ Informationen zu \LaTeX{} auf z.B.: \url{https://tex.cloud.uni-hannover.de/learn
 \begin{enumerate}[a)]
 	\item 
 	\item
-	\item
+	\item Da 'dicegame()' die Funktion 'calculateprobability()' für Werte von 'sides + 1' bis '2 * sides + 1 ' aufruft, fokussieren wir uns auf die Laufzeit von 'calculateprobability()'.
+    In der Funktion 'calculateprobability()' gibt es eine for-loop (von 1 bis x).
+    Durch die Memorisierung wird jeder Wert von x nur einmal berechnet und sonst aus dem Dict ausgelesen.
+    Dadurch beläuft sich die Laufzeit von 'calculateprobability()' auf O(n*x) mit x als aktueller Kandidat dessen Wahrscheinlichkeit berechnet werden soll und n der Anzahl der Seiten des Würfels.
+    Da wir also alle Wahrscheinlichkeiten bis zu '2 * sides + 1' berechnen müssen ergibt sich eine Laufzeit von O((2*sides + 1)*sides).
+
+
+
+ 
+
 \end{enumerate}
 \end{document}
